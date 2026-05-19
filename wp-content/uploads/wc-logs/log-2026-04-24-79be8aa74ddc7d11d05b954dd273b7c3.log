@@ -1,0 +1,3 @@
+2026-04-24T08:53:17+00:00 INFO Payment gateway enabled: "Virement bancaire"
+2026-04-24T08:53:29+00:00 INFO Payment gateway enabled: "Paiements par chèque"
+2026-04-24T08:55:04+00:00 INFO Payment gateway enabled: "Paiement à la livraison"

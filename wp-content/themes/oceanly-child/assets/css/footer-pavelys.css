@@ -1,0 +1,246 @@
+/* ================================================
+   FOOTER PAVELYS — CSS COMPLET
+   Fichier : pavelys-child/footer-pavelys.css
+   À enqueuer dans functions.php
+   ================================================ */
+
+/* === STRUCTURE GÉNÉRALE === */
+
+#pavelys-footer {
+  background-color: #754211 ;
+  color: #e0e0e0;
+  font-family: 'Georgia', serif; 
+  font-size: 14px;
+  padding: 0;
+  margin-top: 0;
+  width: 100%;
+}
+
+.footer-inner {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 2rem;
+  padding: 2.5rem 2rem 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* === COLONNE GÉNÉRIQUE === */
+
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.footer-col h3 {
+  font-size: 12px;
+  font-weight: 600;
+  color: #f0c070;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin: 0 0 14px;
+  font-family: 'Georgia', serif;
+}
+
+/* === BLOC LOGO + SLOGAN + CONTACT === */
+
+.footer-brand .footer-logo img {
+  background-color: whitesmoke;
+  max-width: 160px;
+  height: 160px;
+  margin-bottom: 10px;
+  border-radius: 50%;
+  object-fit: contain;
+  padding: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12), 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.footer-brand .footer-logo img:hover {
+  transform: scale(1.08) rotate(3deg);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.18), 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.footer-site-name {
+  font-size: 22px;
+  font-weight: 700;
+  color: #f0c070;
+  margin: 0 0 6px;
+  letter-spacing: 1px;
+}
+
+.footer-slogan {
+  font-size: 13px;
+  color: #aaaaaa;
+  margin: 0 0 20px;
+  font-style: italic;
+}
+
+.footer-contact {
+  font-style: normal;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.footer-contact span {
+  font-size: 13px;
+  color: #cccccc;
+  line-height: 1.5;
+}
+
+.footer-contact a {
+  color: #f0c070;
+  text-decoration: none;
+}
+
+.footer-contact a:hover {
+  text-decoration: underline;
+}
+
+/* === CATÉGORIES & NAVIGATION === */
+
+.footer-categories ul,
+.footer-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-categories ul li,
+.footer-nav ul li {
+  margin-bottom: 8px;
+}
+
+.footer-categories ul li a,
+.footer-nav ul li a,
+.footer-links li a {
+  color: #bbbbbb;
+  text-decoration: none;
+  font-size: 13px;
+  transition: color 0.2s ease;
+}
+
+.footer-categories ul li a:hover,
+.footer-nav ul li a:hover,
+.footer-links li a:hover {
+  color: #f0c070;
+}
+
+/* wp_list_categories ajoute un .children */
+.footer-categories .children {
+  padding-left: 12px;
+  margin-top: 4px;
+}
+
+/* === RÉSEAUX SOCIAUX === */
+
+.social-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.social-links li a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(240, 192, 112, 0.12);
+  border: 1px solid rgba(240, 192, 112, 0.35);
+  color: #f0c070;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.social-links li a:hover {
+  background: rgba(240, 192, 112, 0.28);
+  border-color: #f0c070;
+}
+
+/* === BARRE COPYRIGHT === */
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 1rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-copyright {
+  font-size: 12px;
+  color: #666666;
+  margin: 0;
+}
+
+.footer-copyright a {
+  color: #888888;
+  text-decoration: none;
+}
+
+.footer-copyright a:hover {
+  color: #f0c070;
+}
+
+.legal-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 16px;
+}
+
+.legal-links li a {
+  font-size: 12px;
+  color: #666666;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.legal-links li a:hover {
+  color: #f0c070;
+}
+
+/* === RESPONSIVE TABLETTE === */
+
+@media (max-width: 900px) {
+  .footer-inner {
+    grid-template-columns: 1fr 1fr;
+  }
+  .footer-brand {
+    grid-column: 1 / -1;
+  }
+}
+
+/* === RESPONSIVE MOBILE === */
+
+@media (max-width: 560px) {
+  .footer-inner {
+    grid-template-columns: 1fr;
+    padding: 2rem 1.25rem 1.5rem;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 1.25rem;
+  }
+  .legal-links {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+
+

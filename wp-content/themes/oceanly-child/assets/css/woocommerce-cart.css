@@ -1,0 +1,373 @@
+/* ================================================
+   PANIER WOOCOMMERCE — PavelyS / Oceanly Child
+   ================================================ */
+
+/* Wrapper global */
+.pavelys-cart-wrapper {
+  max-width: 1100px;
+  margin: 2.5rem auto;
+  padding: 0 1.25rem;
+  font-family: 'Georgia', serif;
+}
+
+/* ── Panier vide ── */
+.pavelys-cart-empty {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: #f9f9f9;
+  border-radius: 12px;
+  border: 1px dashed #ddd;
+}
+
+.pavelys-cart-empty .cart-empty-icon {
+  font-size: 48px;
+  margin-bottom: 1rem;
+}
+
+.pavelys-cart-empty p {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+/* ── Tableau principal ── */
+.pavelys-cart-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+
+.pavelys-cart-table thead tr {
+  background-color: #1a1a2e;
+}
+
+.pavelys-cart-table thead th {
+  padding: 14px 16px;
+  color: #f0c070;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  text-align: left;
+}
+
+.pavelys-cart-table tbody tr.cart_item {
+  border-bottom: 1px solid #f0f0f0;
+  transition: background 0.2s ease;
+}
+
+.pavelys-cart-table tbody tr.cart_item:hover {
+  background-color: #fafaf7;
+}
+
+.pavelys-cart-table td {
+  padding: 16px;
+  vertical-align: middle;
+  color: #333;
+}
+
+/* ── Image produit ── */
+.pavelys-cart-table td.product-thumbnail img {
+  width: 72px;
+  height: 72px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #eee;
+  display: block;
+}
+
+.pavelys-thumb-link { display: block; }
+
+/* ── Nom produit ── */
+.pavelys-product-link {
+  color: #1a1a2e;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 15px;
+  transition: color 0.2s;
+}
+
+.pavelys-product-link:hover {
+  color: #f0c070;
+}
+
+/* ── Bouton supprimer ── */
+.pavelys-remove {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #fee;
+  color: #c0392b !important;
+  font-size: 14px;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.15s;
+  border: 1px solid #fcc;
+}
+
+.pavelys-remove:hover {
+  background: #c0392b;
+  color: #fff !important;
+  transform: scale(1.1);
+}
+
+/* ── Quantité ── */
+.pavelys-cart-table .quantity input[type="number"] {
+  width: 64px;
+  padding: 8px 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  text-align: center;
+  color: #1a1a2e;
+}
+
+.pavelys-cart-table .quantity input[type="number"]:focus {
+  outline: none;
+  border-color: #f0c070;
+  box-shadow: 0 0 0 3px rgba(240,192,112,0.15);
+}
+
+/* ── Prix et sous-total ── */
+.pavelys-cart-table td.product-price,
+.pavelys-cart-table td.product-subtotal {
+  font-weight: 500;
+  color: #1a1a2e;
+}
+
+.pavelys-cart-table td.product-subtotal {
+  color: #b8860b;
+  font-size: 15px;
+}
+
+/* ── Ligne actions ── */
+.pavelys-cart-actions-row td.actions {
+  background: #f8f8f4;
+  padding: 20px 16px;
+  border-top: 2px solid #f0f0f0;
+}
+
+/* ── Coupon ── */
+.pavelys-coupon {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+
+.pavelys-coupon label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #555;
+  white-space: nowrap;
+}
+
+.coupon-input-group {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.pavelys-coupon input.input-text {
+  padding: 9px 14px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 13px;
+  min-width: 180px;
+  transition: border-color 0.2s;
+}
+
+.pavelys-coupon input.input-text:focus {
+  outline: none;
+  border-color: #f0c070;
+  box-shadow: 0 0 0 3px rgba(240,192,112,0.12);
+}
+
+/* ── Boutons ── */
+.pavelys-btn-primary {
+  display: inline-block;
+  background: #1a1a2e !important;
+  color: #f0c070 !important;
+  padding: 11px 24px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+
+.pavelys-btn-primary:hover {
+  background: #f0c070 !important;
+  color: #1a1a2e !important;
+}
+
+.pavelys-btn-secondary {
+  background: #1a1a2e !important;
+  color: #f0c070 !important;
+  padding: 9px 18px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.pavelys-btn-secondary:hover {
+  background: #f0c070 !important;
+  color: #1a1a2e !important;
+}
+
+.pavelys-btn-outline {
+  background: transparent !important;
+  color: #1a1a2e !important;
+  padding: 9px 18px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  border: 1px solid #1a1a2e !important;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.pavelys-btn-outline:hover {
+  background: #1a1a2e !important;
+  color: #f0c070 !important;
+}
+
+/* ── Totaux (cart_collaterals) ── */
+.cart-collaterals {
+  margin-top: 2.5rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.cart_totals {
+  width: 100%;
+  max-width: 420px;
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid #eee;
+  padding: 1.75rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+
+.cart_totals h2 {
+  font-size: 17px;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid #f0c070;
+}
+
+.cart_totals table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  margin-bottom: 1.25rem;
+}
+
+.cart_totals table th,
+.cart_totals table td {
+  padding: 10px 0;
+  border-bottom: 1px solid #f0f0f0;
+  color: #333;
+}
+
+.cart_totals table th {
+  font-weight: 600;
+  color: #555;
+  text-align: left;
+  width: 40%;
+}
+
+.cart_totals .order-total th,
+.cart_totals .order-total td {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1a1a2e;
+  border-bottom: none;
+  padding-top: 14px;
+}
+
+.cart_totals .order-total .amount {
+  color: #b8860b;
+  font-size: 18px;
+}
+
+/* Bouton commander */
+.wc-proceed-to-checkout {
+  margin-top: 1rem;
+}
+
+.wc-proceed-to-checkout .checkout-button,
+.wc-proceed-to-checkout a.checkout-button {
+  display: block;
+  width: 100%;
+  text-align: center;
+  background: #1a1a2e !important;
+  color: #f0c070 !important;
+  padding: 14px 20px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, transform 0.15s;
+}
+
+.wc-proceed-to-checkout .checkout-button:hover {
+  background: #f0c070 !important;
+  color: #1a1a2e !important;
+  transform: translateY(-1px);
+}
+
+/* ── Responsive tablette ── */
+@media (max-width: 768px) {
+  .pavelys-cart-table thead { display: none; }
+
+  .pavelys-cart-table tbody tr.cart_item {
+    display: grid;
+    grid-template-columns: 40px 80px 1fr;
+    grid-template-rows: auto auto;
+    gap: 8px;
+    padding: 16px;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    margin-bottom: 12px;
+  }
+
+  .pavelys-cart-table td { padding: 4px 8px; border: none; }
+  .pavelys-cart-table td::before {
+    content: attr(data-title) " : ";
+    font-weight: 600;
+    color: #888;
+    font-size: 12px;
+    display: block;
+    margin-bottom: 2px;
+  }
+  .pavelys-cart-table td.product-remove::before,
+  .pavelys-cart-table td.product-thumbnail::before { content: none; }
+
+  .cart-collaterals { justify-content: center; }
+  .cart_totals { max-width: 100%; }
+}
+
+/* ── Responsive mobile ── */
+@media (max-width: 480px) {
+  .pavelys-coupon { flex-direction: column; align-items: flex-start; }
+  .coupon-input-group { width: 100%; }
+  .pavelys-coupon input.input-text { width: 100%; }
+}

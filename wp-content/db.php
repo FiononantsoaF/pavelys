@@ -1,0 +1,1 @@
+C:/wamp64/www/pavelys/wp-content/plugins/query-monitor/wp-content/db.php
