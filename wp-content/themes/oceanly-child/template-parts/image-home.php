@@ -39,19 +39,15 @@ if (!empty($terms) && !is_wp_error($terms)) {
 <?php if (!is_page_template('template-parts/product-home.php') && !is_page_template('product-home.php')) : ?>
     <div class="hero-slider" id="heroSlider">
         <div class="hero-slides-track" id="heroTrack">
-
             <?php foreach ($terms_data as $i => $data) :
                 $term = $data['term'];
             ?>
-
             <div class="hero-slide <?php echo ($i === 0) ? 'active' : ''; ?>" data-index="<?php echo esc_attr($i); ?>">
                 <img src="<?php echo esc_url($data['image']); ?>" alt="<?php echo esc_attr($term->name); ?>">
-
                 <div class="hero-slide-overlay">
                     <h2 class="hero-slide-title">
                         <?php echo esc_html($term->name); ?>
                     </h2>
-
                     <a class="hero-slide-btn" href="<?php echo esc_url(get_term_link($term)); ?>">
                         Découvrir la collection
                     </a>

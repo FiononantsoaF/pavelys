@@ -110,7 +110,10 @@
                     <li class="menu-item<?php echo $data['has_children'] ? ' has-children' : ''; ?>" 
                         data-name="<?php echo esc_attr(strtolower($term->name)); ?>">
 
-                        <a href="<?php echo esc_url(get_term_link($term)); ?>">
+                        <!-- <a href="<?php echo esc_url(get_term_link($term)); ?>">
+                            <?php echo esc_html($term->name); ?>
+                        </a> -->
+                        <a href="<?php echo esc_url(add_query_arg('product_name', strtolower($term->name), $product_home_url)); ?>">
                             <?php echo esc_html($term->name); ?>
                         </a>
 
